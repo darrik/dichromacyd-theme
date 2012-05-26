@@ -1,8 +1,9 @@
-;;; dichromacy-theme.el --- color theme suitable for color-blind users
+;;; dichromacyd-theme.el --- color theme suitable for color-blind users
 
 ;; Copyright (C) 2011-2012 Free Software Foundation, Inc.
 
 ;; Author: Chong Yidong <cyd@stupidchicken>
+;; Stuff added by: Rikard Glans (rikard@brainlag.se)
 
 ;; This file is part of GNU Emacs.
 
@@ -21,7 +22,7 @@
 
 ;;; Code:
 
-(deftheme dichromacy
+(deftheme dichromacyd
   "Face colors suitable for red/green color-blind users.
 The color palette is from B. Wong, Nature Methods 8, 441 (2011).
 It is intended to provide good variability while being easily
@@ -40,7 +41,7 @@ Ansi-Color faces are included.")
       (redpurple "#cc79a7")
       (bluegray "#848ea9"))
   (custom-theme-set-faces
-   'dichromacy
+   'dichromacyd
    `(default ((,class (:foreground "black" :background "white"))))
    `(cursor ((,class (:background "black"))))
    ;; Highlighting faces
@@ -53,15 +54,15 @@ Ansi-Color faces are included.")
    `(trailing-whitespace ((,class (:background ,vermillion))))
    ;; Mode line faces
    `(mode-line ((,class (:box (:line-width -1 :style released-button)
-			      :background "#e5e5e5" :foreground "black"))))
+                              :background "#e5e5e5" :foreground "black"))))
    `(mode-line-inactive ((,class (:box (:line-width -1 :style released-button)
-				       :background "#b0b0b0"
-				       :foreground "black"))))
+                                       :background "#b0b0b0"
+                                       :foreground "black"))))
    ;; Escape and prompt faces
    `(minibuffer-prompt ((,class (:weight bold :foreground ,blue))))
    `(escape-glyph ((,class (:foreground ,vermillion))))
    `(error ((,class (:weight bold :slant italic
-			     :foreground ,vermillion))))
+                             :foreground ,vermillion))))
    `(warning ((,class (:foreground ,orange))))
    `(success ((,class (:foreground ,bluegreen))))
    ;; Font lock faces
@@ -110,19 +111,25 @@ Ansi-Color faces are included.")
    `(message-separator ((,class (:weight bold :foreground ,redpurple))))
    ;; Flyspell
    `(flyspell-duplicate ((,class (:weight unspecified :foreground unspecified
-				  :slant unspecified :underline ,orange))))
+                                  :slant unspecified :underline ,orange))))
    `(flyspell-incorrect ((,class (:weight unspecified :foreground unspecified
-				  :slant unspecified :underline ,redpurple)))))
+                                  :slant unspecified :underline ,redpurple))))
+   ;; Linum
+   `(linum ((,class (:foreground "black" :background "white"))))
+   ;; Which func
+   `(which-func ((,class (:foreground "green" :weight bold))))
+   ;;
+   )
 
   (custom-theme-set-variables
-   'dichromacy
+   'dichromacyd
    `(ansi-color-names-vector ["black" ,vermillion ,bluegreen ,yellow
-			      ,blue ,redpurple ,skyblue "white"])))
+                              ,blue ,redpurple ,skyblue "white"])))
 
-(provide-theme 'dichromacy)
+(provide-theme 'dichromacyd)
 
 ;; Local Variables:
 ;; no-byte-compile: t
 ;; End:
 
-;;; dichromacy-theme.el ends here
+;;; dichromacyd-theme.el ends here
