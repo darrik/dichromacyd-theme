@@ -3,7 +3,7 @@
 ;; Copyright (C) 2011-2012 Free Software Foundation, Inc.
 
 ;; Author: Chong Yidong <cyd@stupidchicken>
-;; Stuff added by: Rikard Glans (rikard@brainlag.se)
+;; Modifications: Rikard Glans (rikard@brainlag.se)
 
 ;; This file is part of GNU Emacs.
 
@@ -117,7 +117,7 @@ Ansi-Color faces are included.")
    ;; Linum
    `(linum ((,class (:foreground "black" :background "white"))))
    ;; Which func
-   `(which-func ((,class (:foreground "green" :weight bold))))
+   `(which-func ((,class (:foreground ,bluegreen :weight bold))))
    ;;
    )
 
